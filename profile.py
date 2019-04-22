@@ -46,7 +46,7 @@ for i in range(6):
     node = request.RawPC("storage")
   else:
     node = request.RawPC("compute-" + str(i-2))
-    node.cores = 32
+    node.cores = 16
     node.ram = 4096
     
   node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:CENTOS7-64-STD"
