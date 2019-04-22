@@ -38,14 +38,14 @@ link = request.LAN("lan")
 
 for i in range(6):
   if i == 0:
-    node = request.RawPC("head")
+    node = request.XenVM("head")
     node.routable_control_ip = "true"
   elif i == 1:
-    node = request.RawPC("metadata")
+    node = request.XenVM("metadata")
   elif i == 2:
-    node = request.RawPC("storage")
+    node = request.XenVM("storage")
   else:
-    node = request.RawPC("compute-" + str(i-2))
+    node = request.XenVM("compute-" + str(i-2))
     node.cores = 16
     node.ram = 4096
     
