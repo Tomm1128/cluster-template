@@ -8,7 +8,7 @@ import geni.rspec.igext as IG
 pc = portal.Context()
 
 # Create a Request object to start building the RSpec.
-request = pc.makeRequestRSpec()
+request = portal.context.makeRequestRSpec()
 
 
 tourDescription = \
