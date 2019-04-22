@@ -38,15 +38,15 @@ link = request.LAN("lan")
 
 for i in range(6):
   if i == 0:
-    node = request.XenVM("head")
+    node = request.RawPC("head")
     node.routable_control_ip = "true"
   elif i == 1:
-    node = request.XenVM("metadata")
+    node = request.RawPC("metadata")
   elif i == 2:
-    node = request.XenVM("storage")
+    node = request.RawPC("storage")
   else:
-    node = request.XenVM("compute-" + str(i-2))
-    node.cores = 4
+    node = request.RawPC("compute-" + str(i-2))
+    node.cores = 32
     node.ram = 4096
     
   node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:CENTOS7-64-STD"
